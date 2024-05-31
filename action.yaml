@@ -1,0 +1,30 @@
+name: Create semantic release
+description: Creates a semantic GitHub release
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/iron
+
+    - name: Install dependencies
+      shell: bash
+      run: |
+        npm install --no-save @semantic-release/git @semantic-release/changelog @semantic-release/exec
+
+    - name: Copy files to context
+      shell: bash
+      run: |
+        cp ${{ github.action_path }}/release.config.mjs .
+
+    - name: Create semantic release
+      shell: bash
+      run: npx semantic-release
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        GIT_AUTHOR_NAME: github-actions[bot]
+        GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        GIT_COMMITTER_NAME: github-actions[bot]
+        GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
