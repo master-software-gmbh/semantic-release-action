@@ -28,12 +28,6 @@ if (existsSync("package.json")) {
 
 plugins.push(
   [
-    "@semantic-release/exec",
-    {
-      prepareCmd: "git tag -f v${nextRelease.version.split('.')[0]} && git push origin v${nextRelease.version.split('.')[0]} -f",
-    },
-  ],
-  [
     "@semantic-release/git",
     {
       assets: [
@@ -44,6 +38,12 @@ plugins.push(
         "package-lock.json",
         "npm-shrinkwrap.json",
       ],
+    },
+  ],
+  [
+    "@semantic-release/exec",
+    {
+      prepareCmd: "git tag -f v${nextRelease.version.split('.')[0]} && git push origin v${nextRelease.version.split('.')[0]} -f",
     },
   ],
   "@semantic-release/github"
