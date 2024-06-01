@@ -43,7 +43,7 @@ plugins.push(
   [
     "@semantic-release/exec",
     {
-      prepareCmd: "git tag -f v${nextRelease.version.split('.')[0]} && git push origin v${nextRelease.version.split('.')[0]} -f",
+      publishCmd: "git tag -f v${nextRelease.version.split('.')[0]} && git push origin v${nextRelease.version.split('.')[0]} -f",
     },
   ],
   "@semantic-release/github"
