@@ -26,9 +26,28 @@ if (existsSync("package.json")) {
   ]);
 }
 
-plugins.push("@semantic-release/git", "@semantic-release/github");
-
-console.log(plugins);
+plugins.push(
+  [
+    "@semantic-release/exec",
+    {
+      prepareCmd: "git tag -f v${nextRelease.version.split('.')[0]} && git push origin v${nextRelease.version.split('.')[0]} -f",
+    },
+  ],
+  [
+    "@semantic-release/git",
+    {
+      assets: [
+        "CHANGELOG.md",
+        "galaxy.yaml",
+        "manifest.json",
+        "package.json",
+        "package-lock.json",
+        "npm-shrinkwrap.json",
+      ],
+    },
+  ],
+  "@semantic-release/github"
+);
 
 /**
  * @type {import('semantic-release').GlobalConfig}
