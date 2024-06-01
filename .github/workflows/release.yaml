@@ -1,0 +1,21 @@
+name: Release GitHub action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    name: Release GitHub action
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create semantic release
+        uses: master-software-gmbh/semantic-release-action@v1
