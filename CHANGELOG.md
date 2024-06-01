@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.2.1...v1.2.2) (2024-06-01)
+
+
+### Bug Fixes
+
+* change semantic-release execution command ([306d0bb](https://github.com/master-software-gmbh/semantic-release-action/commit/306d0bbec5792d7e42657b2b02beb0717d357cee))
+
 ## [1.2.1](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.2.0...v1.2.1) (2024-06-01)
 
 
