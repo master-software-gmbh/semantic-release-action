@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.2.0...v1.2.1) (2024-06-01)
+
+
+### Bug Fixes
+
+* use prefix when installing dependencies ([c45cdc4](https://github.com/master-software-gmbh/semantic-release-action/commit/c45cdc4e993eee7720c8a2ceb4f43a1488df0757))
+
 # [1.2.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.1.2...v1.2.0) (2024-06-01)
 
 
