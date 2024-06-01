@@ -47,7 +47,7 @@ plugins.push(
     },
   ],
   "@semantic-release/github",
-  "./plugins/release-status-plugin.mjs"
+  "./release-status-plugin.mjs"
 );
 
 /**

@@ -21,7 +21,7 @@ runs:
     - id: semantic-release
       name: Create semantic release
       shell: bash
-      run: npx semantic-release -- --extends ${{ github.action_path }}/release.config.mjs
+      run: npm exec --prefix ${{ github.action_path }} semantic-release -- --extends ${{ github.action_path }}/release.config.mjs
       env:
         GITHUB_TOKEN: ${{ github.token }}
         GIT_AUTHOR_NAME: github-actions[bot]
