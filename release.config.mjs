@@ -46,7 +46,8 @@ plugins.push(
       publishCmd: "git tag -f v${nextRelease.version.split('.')[0]} && git push origin v${nextRelease.version.split('.')[0]} -f",
     },
   ],
-  "@semantic-release/github"
+  "@semantic-release/github",
+  "./plugins/release-status-plugin.mjs"
 );
 
 /**

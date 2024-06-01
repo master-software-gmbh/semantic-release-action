@@ -1,6 +1,11 @@
 name: Create semantic release
 description: Creates a semantic GitHub release
 
+outputs:
+  release-published:
+    description: If a new release has been published
+    value: ${{ steps.semantic-release.outputs.release-published }}
+
 runs:
   using: composite
   steps:
@@ -11,15 +16,15 @@ runs:
 
     - name: Install dependencies
       shell: bash
-      run: |
-        npm install --no-save @semantic-release/git @semantic-release/changelog @semantic-release/exec
+      run: npm install
 
     - name: Copy files to context
       shell: bash
       run: |
         cp ${{ github.action_path }}/release.config.mjs .
 
-    - name: Create semantic release
+    - id: semantic-release
+      name: Create semantic release
       shell: bash
       run: npx semantic-release
       env:
