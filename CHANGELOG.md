@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.2.2...v1.3.0) (2024-06-02)
+
+
+### Features
+
+* disable success comments on issues and pull requests ([1b3b6d7](https://github.com/master-software-gmbh/semantic-release-action/commit/1b3b6d79dd7515a2c11033f4709f05c8d31dac10))
+
 ## [1.2.2](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.2.1...v1.2.2) (2024-06-01)
 
 
