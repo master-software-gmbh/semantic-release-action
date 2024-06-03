@@ -7,7 +7,7 @@ const plugins = [
   [
     "@semantic-release/commit-analyzer",
     {
-      config: "conventional-changelog-conventionalcommits",
+      preset: "conventionalcommits",
     },
   ],
   "@semantic-release/release-notes-generator",
