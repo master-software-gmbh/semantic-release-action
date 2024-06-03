@@ -1,3 +1,21 @@
+# [1.4.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.3.0...v1.4.0) (2024-06-03)
+
+
+### Bug Fixes
+
+* install dependencies in working directory ([262167c](https://github.com/master-software-gmbh/semantic-release-action/commit/262167cce534d4e8b3feed17c8822c7d77cc0d37))
+* use config option for commit analyzer preset ([81c2f0c](https://github.com/master-software-gmbh/semantic-release-action/commit/81c2f0cdde152347faf4815230d622ea894a2e35))
+
+
+### Features
+
+* use conventional commits preset for commit analyzer ([30c17ab](https://github.com/master-software-gmbh/semantic-release-action/commit/30c17ab35a00817a1d8d49cf53948c19f1590eae))
+
+
+### Reverts
+
+* add prefix to npm commands ([a22680f](https://github.com/master-software-gmbh/semantic-release-action/commit/a22680fccc4ae30f52ec3f8ed38fb2b3099ee58e))
+
 # [1.3.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.2.2...v1.3.0) (2024-06-02)
 
 
