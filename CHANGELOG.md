@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.5.1...v1.5.2) (2024-07-01)
+
+
+### Bug Fixes
+
+* update release config ([aad8718](https://github.com/master-software-gmbh/semantic-release-action/commit/aad87186b8bd83ada6a6be0df2dd35734dd29b0d))
+
 ## [1.5.1](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.5.0...v1.5.1) (2024-07-01)
 
 
