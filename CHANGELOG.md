@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.5.2...v1.5.3) (2024-07-01)
+
+
+### Bug Fixes
+
+* add missing arguments to yq ([e274e1d](https://github.com/master-software-gmbh/semantic-release-action/commit/e274e1de7b293014c98c17a44c26077bf17f2500))
+
 ## [1.5.2](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.5.1...v1.5.2) (2024-07-01)
 
 
