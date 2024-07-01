@@ -34,7 +34,7 @@ if (existsSync("package.json")) {
     "@semantic-release/exec",
     {
       prepareCmd:
-        "jq '.version = \"${nextRelease.version}\"' galaxy.yml > tmp.yaml && mv tmp.yaml galaxy.yml",
+        "yq '.version = \"${nextRelease.version}\"' galaxy.yml > tmp.yaml && mv tmp.yaml galaxy.yml",
     },
   ]);
 }
