@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.5.0...v1.5.1) (2024-07-01)
+
+
+### Bug Fixes
+
+* install yq in action ([ecaa787](https://github.com/master-software-gmbh/semantic-release-action/commit/ecaa78779a846c8d4aa55faacb1c900e8ad21e7e))
+
 # [1.5.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.4.0...v1.5.0) (2024-07-01)
 
 
