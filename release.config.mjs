@@ -43,8 +43,9 @@ if (existsSync("galaxy.yml")) {
   plugins.push([
     "@semantic-release/exec",
     {
+      // Arguments are required because yq from pip behaves differently from the original binary
       prepareCmd:
-        "yq '.version = \"${nextRelease.version}\"' galaxy.yml > tmp.yaml && mv tmp.yaml galaxy.yml",
+        "yq -Y --in-place '.version = \"${nextRelease.version}\"' galaxy.yml",
     },
   ]);
 }
