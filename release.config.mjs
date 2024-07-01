@@ -15,13 +15,19 @@ const plugins = [
 ];
 
 if (existsSync("package.json")) {
+  console.log("Detected package.json file.");
+
   plugins.push([
     "@semantic-release/npm",
     {
       npmPublish: false,
     },
   ]);
-} else if (existsSync("manifest.json")) {
+}
+
+if (existsSync("manifest.json")) {
+  console.log("Detected manifest.json file.");
+
   plugins.push([
     "@semantic-release/exec",
     {
@@ -29,7 +35,11 @@ if (existsSync("package.json")) {
         "jq '.version = \"${nextRelease.version}\"' manifest.json > tmp.json && mv tmp.json manifest.json",
     },
   ]);
-} else if (existsSync("galaxy.yml")) {
+}
+
+if (existsSync("galaxy.yml")) {
+  console.log("Detected galaxy.yml file.");
+
   plugins.push([
     "@semantic-release/exec",
     {
