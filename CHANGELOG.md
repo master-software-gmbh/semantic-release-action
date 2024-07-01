@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.4.0...v1.5.0) (2024-07-01)
+
+
+### Features
+
+* update version in galaxy.yml files ([fca3899](https://github.com/master-software-gmbh/semantic-release-action/commit/fca389901131be2e167698c8752f9ad79fc59afc))
+
 # [1.4.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.3.0...v1.4.0) (2024-06-03)
 
 
