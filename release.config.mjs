@@ -29,6 +29,14 @@ if (existsSync("package.json")) {
         "jq '.version = \"${nextRelease.version}\"' manifest.json > tmp.json && mv tmp.json manifest.json",
     },
   ]);
+} else if (existsSync("galaxy.yml")) {
+  plugins.push([
+    "@semantic-release/exec",
+    {
+      prepareCmd:
+        "jq '.version = \"${nextRelease.version}\"' galaxy.yml > tmp.yaml && mv tmp.yaml galaxy.yml",
+    },
+  ]);
 }
 
 plugins.push(
@@ -37,7 +45,7 @@ plugins.push(
     {
       assets: [
         "CHANGELOG.md",
-        "galaxy.yaml",
+        "galaxy.yml",
         "manifest.json",
         "package.json",
         "package-lock.json",
