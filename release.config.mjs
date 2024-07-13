@@ -75,6 +75,7 @@ plugins.push(
     "@semantic-release/github",
     {
       successComment: false,
+      failComment: false,
     },
   ],
   "./release-status-plugin.mjs"
