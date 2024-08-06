@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.5.3...v1.6.0) (2024-07-13)
+
+
+### Features
+
+* disable fail comments ([a58a818](https://github.com/master-software-gmbh/semantic-release-action/commit/a58a8185185d669251a40b43262b650e7f2dd660))
+
 ## [1.5.3](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.5.2...v1.5.3) (2024-07-01)
 
 
