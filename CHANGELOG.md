@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.6.0...v1.7.0) (2024-08-06)
+
+
+### Features
+
+* add expo plugin ([3d2fedf](https://github.com/master-software-gmbh/semantic-release-action/commit/3d2fedfda34afea722466042f6504b27aa3884de))
+
 # [1.6.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.5.3...v1.6.0) (2024-07-13)
 
 
