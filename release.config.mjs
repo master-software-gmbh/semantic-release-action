@@ -50,6 +50,14 @@ if (existsSync("galaxy.yml")) {
   ]);
 }
 
+if (existsSync("app.json")) {
+  console.log("Detected app.json file.");
+
+  plugins.push([
+    "./expo-plugin.mjs"
+  ]);
+}
+
 plugins.push(
   [
     "@semantic-release/git",
@@ -61,6 +69,7 @@ plugins.push(
         "package.json",
         "package-lock.json",
         "npm-shrinkwrap.json",
+        "app.json"
       ],
     },
   ],
