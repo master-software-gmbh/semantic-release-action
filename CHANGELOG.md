@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.7.1...v1.7.2) (2024-08-06)
+
+
+### Bug Fixes
+
+* replace expo plugin with jq to preserve formatting ([c7f4a38](https://github.com/master-software-gmbh/semantic-release-action/commit/c7f4a3837f451264c3c8d8bd6afbb78ba94c69b1))
+
 ## [1.7.1](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.7.0...v1.7.1) (2024-08-06)
 
 
