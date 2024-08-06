@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.7.0...v1.7.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* expo plugin ([b6d6308](https://github.com/master-software-gmbh/semantic-release-action/commit/b6d6308721fea4d701cbac1db1a467dec71c1928))
+
 # [1.7.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.6.0...v1.7.0) (2024-08-06)
 
 
