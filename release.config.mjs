@@ -54,7 +54,11 @@ if (existsSync("app.json")) {
   console.log("Detected app.json file.");
 
   plugins.push([
-    "./expo-plugin.mjs"
+    "@semantic-release/exec",
+    {
+      prepareCmd:
+        "jq '.expo.version = \"${nextRelease.version}\"' app.json > tmp.json && mv tmp.json app.json",
+    },
   ]);
 }
 
