@@ -1,22 +1,22 @@
-import { readFile, writeFile } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 
 export default {
   prepare: async (_, { nextRelease }) => {
     const manifest = readManifest();
     
     // Update Expo version
-    updateVersion(nextRelease.version);
+    updateVersion(manifest, nextRelease.version);
 
     writeManifest(manifest);
   },
 };
 
 function readManifest() {
-  return JSON.parse(readFile('app.json'));
+  return JSON.parse(readFileSync('app.json'));
 }
 
 function writeManifest(manifest) {
-  writeFile('app.json', JSON.stringify(manifest));
+  writeFileSync('app.json', JSON.stringify(manifest));
 }
 
 function updateVersion(manifest, version) {
