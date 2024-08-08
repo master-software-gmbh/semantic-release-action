@@ -8,6 +8,15 @@ const plugins = [
     "@semantic-release/commit-analyzer",
     {
       preset: "conventionalcommits",
+      releaseRules: [
+        { type: "build", release: "patch" },
+        { type: "chore", release: "patch" },
+        { type: "ci", release: "patch" },
+        { type: "docs", release: "patch" },
+        { type: "refactor", release: "patch" },
+        { type: "style", release: "patch" },
+        { type: "test", release: "patch" },
+      ],
     },
   ],
   "@semantic-release/release-notes-generator",
@@ -73,7 +82,7 @@ plugins.push(
         "package.json",
         "package-lock.json",
         "npm-shrinkwrap.json",
-        "app.json"
+        "app.json",
       ],
     },
   ],
