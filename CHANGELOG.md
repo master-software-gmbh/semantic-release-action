@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.7.2...v1.8.0) (2024-08-08)
+
+
+### Features
+
+* create patch release for additional commit types ([2bf58a5](https://github.com/master-software-gmbh/semantic-release-action/commit/2bf58a50bf93641c55689e3b6730c26d6a38bfbe))
+
 ## [1.7.2](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.7.1...v1.7.2) (2024-08-06)
 
 
