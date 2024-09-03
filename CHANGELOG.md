@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.8.0...v1.9.0) (2024-09-03)
+
+
+### Features
+
+* detect and update xcode project ([53dca5b](https://github.com/master-software-gmbh/semantic-release-action/commit/53dca5b621a0ddb553cbd4a5689cb5698774652b))
+
 # [1.8.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.7.2...v1.8.0) (2024-08-08)
 
 
