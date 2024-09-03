@@ -1,6 +1,6 @@
 {
   "name": "@master-software/semantic-release-action",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "author": "Master Software <info@master-software.de>",
   "license": "UNLICENSED",
   "dependencies": {

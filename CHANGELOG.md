@@ -1,3 +1,10 @@
+## [1.9.3](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.9.2...v1.9.3) (2024-09-03)
+
+
+### Bug Fixes
+
+* commit xcode project file ([1c3e9df](https://github.com/master-software-gmbh/semantic-release-action/commit/1c3e9dfa6d340b50e6dfe84afe7f5c00fa8b1d82))
+
 ## [1.9.2](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.9.1...v1.9.2) (2024-09-03)
 
 ## [1.9.1](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.9.0...v1.9.1) (2024-09-03)
