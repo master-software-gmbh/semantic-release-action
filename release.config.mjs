@@ -85,7 +85,8 @@ if (xcodeProject) {
   plugins.push([
     "@semantic-release/exec",
     {
-      prepareCmd: `sed -i '' "s/MARKETING_VERSION = [0-9.]*;/MARKETING_VERSION = \${nextRelease.version};/g" "${xcodeProject}/project.pbxproj"`,
+      // for macOS sed -i '' "..."
+      prepareCmd: `sed -i "s/MARKETING_VERSION = [0-9.]*;/MARKETING_VERSION = \${nextRelease.version};/g" "${xcodeProject}/project.pbxproj"`,
     },
   ]);
 }
