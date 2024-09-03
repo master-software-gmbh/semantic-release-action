@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.9.0...v1.9.1) (2024-09-03)
+
+
+### Bug Fixes
+
+* sed command for linux ([e72d852](https://github.com/master-software-gmbh/semantic-release-action/commit/e72d852a836431234af792286200ce1eada4c649))
+
 # [1.9.0](https://github.com/master-software-gmbh/semantic-release-action/compare/v1.8.0...v1.9.0) (2024-09-03)
 
 
