@@ -6,6 +6,8 @@ function fileExists(withExtension) {
   return files.find((file) => extname(file) === withExtension);
 }
 
+const additionalAssets = [];
+
 /**
  * @type {import('semantic-release').PluginSpec[]}
  */
@@ -81,14 +83,17 @@ const xcodeProject = fileExists(".xcodeproj");
 
 if (xcodeProject) {
   console.log("Detected Xcode project.");
+  const projectFile = `${xcodeProject}/project.pbxproj`;
 
   plugins.push([
     "@semantic-release/exec",
     {
       // for macOS sed -i '' "..."
-      prepareCmd: `sed -i "s/MARKETING_VERSION = [0-9.]*;/MARKETING_VERSION = \${nextRelease.version};/g" "${xcodeProject}/project.pbxproj"`,
+      prepareCmd: `sed -i "s/MARKETING_VERSION = [0-9.]*;/MARKETING_VERSION = \${nextRelease.version};/g" "${projectFile}"`,
     },
   ]);
+
+  additionalAssets.push(projectFile);
 }
 
 plugins.push(
@@ -103,6 +108,7 @@ plugins.push(
         "package-lock.json",
         "npm-shrinkwrap.json",
         "app.json",
+        ...additionalAssets,
       ],
     },
   ],
