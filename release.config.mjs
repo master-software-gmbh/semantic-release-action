@@ -1,4 +1,10 @@
-import { existsSync } from "fs";
+import { existsSync, readdirSync } from "node:fs";
+import { extname } from "node:path";
+
+function fileExists(withExtension) {
+  const files = readdirSync(process.cwd());
+  return files.find((file) => extname(file) === withExtension);
+}
 
 /**
  * @type {import('semantic-release').PluginSpec[]}
@@ -67,6 +73,19 @@ if (existsSync("app.json")) {
     {
       prepareCmd:
         "jq '.expo.version = \"${nextRelease.version}\"' app.json > tmp.json && mv tmp.json app.json",
+    },
+  ]);
+}
+
+const xcodeProject = fileExists(".xcodeproj");
+
+if (xcodeProject) {
+  console.log("Detected Xcode project.");
+
+  plugins.push([
+    "@semantic-release/exec",
+    {
+      prepareCmd: `sed -i '' "s/MARKETING_VERSION = [0-9.]*;/MARKETING_VERSION = \${nextRelease.version};/g" "${xcodeProject}/project.pbxproj"`,
     },
   ]);
 }
