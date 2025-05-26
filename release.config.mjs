@@ -28,7 +28,6 @@ const plugins = [
     },
   ],
   "@semantic-release/release-notes-generator",
-  "@semantic-release/changelog",
 ];
 
 if (existsSync("package.json")) {
@@ -50,19 +49,6 @@ if (existsSync("manifest.json")) {
     {
       prepareCmd:
         "jq '.version = \"${nextRelease.version}\"' manifest.json > tmp.json && mv tmp.json manifest.json",
-    },
-  ]);
-}
-
-if (existsSync("galaxy.yml")) {
-  console.log("Detected galaxy.yml file.");
-
-  plugins.push([
-    "@semantic-release/exec",
-    {
-      // Arguments are required because yq from pip behaves differently from the original binary
-      prepareCmd:
-        "yq -Y --in-place '.version = \"${nextRelease.version}\"' galaxy.yml",
     },
   ]);
 }
@@ -101,8 +87,6 @@ plugins.push(
     "@semantic-release/git",
     {
       assets: [
-        "CHANGELOG.md",
-        "galaxy.yml",
         "manifest.json",
         "package.json",
         "package-lock.json",
